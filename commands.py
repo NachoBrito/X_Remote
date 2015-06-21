@@ -34,7 +34,10 @@ def check_permissions(cmd_name, from_peer):
 			return True
 		if isinstance(permissions, collections.Iterable):
 			if cmd_name not in permissions:
+				print "Command %s not in allowed list: %s" % (cmd_name, permissions)
 				raise CommandNotAllowed
+			return True
+	print "Peer %s not known" % from_peer	
 	raise PeerNotRecognized
 
 

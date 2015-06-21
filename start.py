@@ -49,11 +49,7 @@ class HangoutsBot(ClientXMPP):
     def message(self, msg):
         if msg['type'] in ('chat', 'normal'): 
             from_peer = msg['from'].bare
-            if(True or from_peer in config.bot_valid_peers):
-                reply = msg.reply(run_command(msg['body'], from_peer))
-            else:                
-                reply = msg.reply("Sorry, I don't know you (%s)" % from_peer)
-
+            reply = msg.reply(run_command(msg['body'], from_peer))
             reply.send()
 
 
