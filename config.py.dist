@@ -1,5 +1,9 @@
 bot_username = 'bot_username@gmail.com'
 bot_password = 'bot_passwd'
+bot_server = 'talk.google.com'
+bot_port = '5223'
+bot_use_tls = False
+bot_use_ssl = True
 peers_acl = {
 'peer@domain':['Cmd1','Cmd2'],
 'admin@domain': '*'

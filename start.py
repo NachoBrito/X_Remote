@@ -62,5 +62,5 @@ if __name__ == '__main__':
                         format='%(levelname)-8s %(message)s')
 
     xmpp = HangoutsBot(config.bot_username, config.bot_password)
-    xmpp.connect(('talk.google.com',5223),use_tls=False, use_ssl=True)
+    xmpp.connect((config.bot_server,config.bot_port),use_tls=config.bot_use_tls, use_ssl=config.bot_use_ssl)
     xmpp.process(block=True)
