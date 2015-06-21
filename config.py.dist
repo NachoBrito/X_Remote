@@ -1,0 +1,6 @@
+bot_username = 'bot_username@gmail.com'
+bot_password = 'bot_passwd'
+peers_acl = {
+'peer@domain':['Cmd1','Cmd2'],
+'admin@domain': '*'
+}
